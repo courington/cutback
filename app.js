@@ -3,16 +3,21 @@ var app = express();
 
 app.get('/', function(req, res) {
   res.send({
-    "Output": "Hello World!"
+    "Output": "Welcome to cutback!"
   });
 });
 
 app.post('/', function(req, res) {
   res.send({
-    "Output": "Hello World!"
+    "Output": "Welcome to cutback!"
   });
 });
 
+app.get('/api', function(req, res) {
+  res.send({
+    "Output": "Welcome to cutback api!"
+  });
+});
 
 // Export your Express configuration so that it can be consumed by the Lambda handler
 module.exports = app
