@@ -1,6 +1,6 @@
 'use strict';
 
-const supertest = require('supertest'); 
+const supertest = require('supertest');
 const test = require('unit.js');
 const app = require('../app.js');
 
@@ -16,13 +16,6 @@ describe('Tests app', function() {
   });
   it('verifies post', function(done) {
     request.post('/').expect(200).end(function(err, result) {
-        test.string(result.body.Output).contains('Welcome');
-        test.value(result).hasHeader('content-type', 'application/json; charset=utf-8');
-        done(err);
-    });
-  });
-  it('verifies api get', function(done) {
-    request.get('/api').expect(200).end(function(err, result) {
         test.string(result.body.Output).contains('Welcome');
         test.value(result).hasHeader('content-type', 'application/json; charset=utf-8');
         done(err);

@@ -13,11 +13,5 @@ app.post('/', function(req, res) {
   });
 });
 
-app.get('/api', function(req, res) {
-  res.send({
-    "Output": "Welcome to cutback api!"
-  });
-});
-
 // Export your Express configuration so that it can be consumed by the Lambda handler
 module.exports = app

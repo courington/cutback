@@ -41,8 +41,3 @@ Resources:
           Properties:
             Path: /
             Method: post
-        GetEvent:
-          Type: Api
-          Properties:
-            Path: /api
-            Method: get
